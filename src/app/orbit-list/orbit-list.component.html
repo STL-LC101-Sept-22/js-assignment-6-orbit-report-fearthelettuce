@@ -6,7 +6,11 @@
     <th>Orbit Type</th>
     <th>Launch Date</th>
   </tr>
-  <tr class="data-row" *ngFor="let satellite of satellites">
+  <tr
+    class="data-row"
+    [class.alt-row]="i % 2 === 0"
+    *ngFor="let satellite of satellites; let i = index"
+  >
     <td>{{ satellite.name }}</td>
     <td [class.warning]="satellite.type === 'Space Debris'">
       {{ satellite.type }}
