@@ -12,7 +12,7 @@
     *ngFor="let satellite of satellites; let i = index"
   >
     <td>{{ satellite.name }}</td>
-    <td [class.warning]="satellite.type === 'Space Debris'">
+    <td [class.warning]="satellite.isSpaceDebris()">
       {{ satellite.type }}
     </td>
     <td>{{ satellite.operational }}</td>
